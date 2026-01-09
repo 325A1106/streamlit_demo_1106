@@ -89,7 +89,7 @@ if not st.session_state.game_over:
             st.session_state.player_hand.append(st.session_state.deck.pop())
             st.rerun()
         if c2.button("スタンド (Stand)"):
-            while calculate_score(st.session_state.dealer_hand) < 21:
+            while calculate_score(st.session_state.dealer_hand) < 17:
                 st.session_state.dealer_hand.append(st.session_state.deck.pop())
             st.session_state.game_over = True
             st.rerun()
@@ -109,3 +109,4 @@ if st.session_state.game_over:
         reset_game()
 
         st.rerun()
+
